@@ -1,0 +1,14 @@
+#include<bits/stdc++.h>
+using namespace std;
+int path(int m,int n){
+int res=1;
+for(int i=1;i<min(m,n);i++){
+res=res*(m+n-1-i)/i;
+}
+return int(res);
+}
+int main(){
+int m,n;
+cin>>m>>n;
+cout<<path(m,n);
+}
