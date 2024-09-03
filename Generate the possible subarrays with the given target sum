@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    int target;
+    cin>>target;
+    vector<int>num(n);
+    vector<vector<int>>ans;
+    for(int i=0;i<n;i++){
+        cin>>num[i];
+    }
+    for(int i=0;i<n;i++){
+        vector<int>sub;
+        int sum=0;
+    for(int j=i;j<n;j++){
+        sum+=num[j];
+        sub.push_back(num[j]);
+        if(target==sum){
+            ans.push_back(sub);
+
+        }
+    }
+    }
+    for(auto & x:ans){
+        for(auto & a:x){
+            cout<<a<<" ";
+        }
+        cout<<endl;
+    }
+
+
+    }
+    
