@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+#include<string>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    int totalprice=0;
+    double avg=0;
+    string maxcostitem=" ";
+    int maxcost=0;
+    for(int i=0;i<n;i++){
+        string item;
+        int price;
+        int quantity;
+        cin>>item>>price>>quantity;
+        totalprice+=quantity*price;
+if(totalprice>maxcost){
+    maxcostitem=item;
+}
+    }
+    avg=totalprice/n;
+    cout<<fixed<<setprecision(2);
+    cout<<maxcostitem<<endl<<totalprice<<endl<<avg<<endl;;
+}
