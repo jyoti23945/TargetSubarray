@@ -3,7 +3,7 @@ using namespace std;
 void solve(vector<int>&nums, int k){
     vector<int>ans;
    
-    for(int i=0;i<nums.size();i++){
+    for(int i=0;i<nums.size()-k+1;i++){
          priority_queue<int>p;
          
         for(int j=i;j<i+k;j++){
@@ -26,9 +26,15 @@ int main(){
     int k;
     cin>>k;
     solve(arr,k);
+    return 0;
 
 
         }
+    
+    
+
+
+    
     
     
 
