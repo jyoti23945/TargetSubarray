@@ -1,0 +1,25 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    string name, gender;
+    char grade;
+    int age;
+    int totalfemale=0;					
+    int totalgrade=0;
+
+    while(n--){
+        cin>>name>>gender>>grade>>age;
+        if(age>20)cout<<name;
+        if(gender=="female"){
+            totalfemale++;
+            totalgrade+=(int)grade;
+        }
+
+    }
+    double avg=(double)(totalgrade/totalfemale);
+    cout<<avg;
+
+}
