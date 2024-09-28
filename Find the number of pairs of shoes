@@ -1,0 +1,27 @@
+#include<iostream>
+#include<vector>
+#include<string>
+#include<unordered_map>
+using namespace std;
+int main(){
+    int count=0;
+   string n;
+   vector<string>nums;
+   while(cin>>n){
+    nums.push_back(n);
+    if(cin.get()=='\n')break;
+   }
+    unordered_map<string,int>mp;
+    for(int i=0;i<nums.size();i++){
+        if(mp.find(nums[i])!=mp.end()){
+            count++;
+        }
+            else{
+                mp[nums[i]]=1;
+
+            }
+        
+        }
+        cout<<count;
+        return 0;
+    }
