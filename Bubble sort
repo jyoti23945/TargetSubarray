@@ -1,0 +1,36 @@
+#include<iostream>
+#include<vector>
+#include<string>
+#include<sstream>
+using namespace std;
+int main(){
+//int n;
+//cin>>n;
+vector<int>nums;
+string line;
+getline(cin,line);
+istringstream stream(line);
+int x;
+while(stream>>x){
+    nums.push_back(x);
+
+}
+int n=nums.size();
+int count=1;
+ while(count<n){
+    for(int i=0;i<n-count;i++){
+        if(nums[i]>nums[i+1]){
+            swap(nums[i],nums[i+1]);
+        }
+    }
+    count++;
+    
+
+ }
+ for(auto c:nums)
+    cout<<c<<" ";
+
+
+
+}
+//making the maximum element reach the last position at every iteration
