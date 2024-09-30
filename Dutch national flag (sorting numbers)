@@ -1,0 +1,39 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+vector<char>sortby(vector<char>&arr,int n  ){
+    int l=0;
+    int r=n-1;
+    int m=0;
+    while(r>=m){
+        if(arr[m]=='3'){
+            swap(arr[l],arr[m]);
+            l++;
+            m++;
+
+        }
+        else if(arr[m]=='6'){
+            m++;
+
+        }
+        else if(arr[m]=='7'){
+            swap(arr[r],arr[m]);
+            r--;
+
+        }
+    }
+    return arr;
+}
+int main(){
+    vector<char>nums;
+    char c;
+    while(cin>>c){
+        nums.push_back(c);
+        if(cin.get()=='\n')break;
+    }
+nums=sortby(nums,nums.size());
+for(char c:nums){
+    cout<<c<<" ";
+}
+return 0;
+}Dutch 
