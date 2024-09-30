@@ -1,0 +1,48 @@
+public int missingNumber(int[] nums) {
+    int n = nums.length;
+    int expectedSum = n * (n + 1) / 2;
+    int actualSum = 0;
+    
+    for (int num : nums) {
+        actualSum += num;
+    }
+    
+    return expectedSum - actualSum;
+	
+}
+CODE 2
+class Solution {
+public:
+    int missingNumber(vector<int>& nums) {
+        int ans=0;
+        sort(nums.begin(),nums.end());
+        if(nums[0]!=0){
+            return 0;
+        }
+        for(int i=1;i<nums.size();i++){
+            int k=abs(nums[i]-nums[i-1]);
+                      if(k!=1){
+                ans=nums[i]-1;
+                          return ans;
+            }
+            
+        }
+           return nums.size()   ;
+        
+    }
+};
+	
+			CODE 3
+class Solution {
+public:
+    int missingNumber(vector<int>& nums) {
+        int result = nums.size();
+        int i=0;
+        
+        for(int num:nums){
+            result ^= num;
+            result ^= i;
+            i++;
+        }
+        
+        return result;
