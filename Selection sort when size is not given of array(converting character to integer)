@@ -1,3 +1,4 @@
+//Choose maximum element in each iteration and keep choosing
 #include<iostream>
 #include<vector>
 #include<string>
