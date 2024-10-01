@@ -1,0 +1,33 @@
+#include<iostream>
+
+#include<vector>
+using namespace std;
+bool isprime(int n){
+    if(n<=1)return false;
+    if(n==2)return true;
+    for(int i=2;i*i<=n;i++){//or for(int i=2;i<n;i++)
+        if(n%i==0)return false;
+    }
+    return true;
+}
+bool calculatesum(int n){
+    int sum=0;
+    while(n>0){
+    int num=n%10;
+    sum+=num;
+    n=n/10;
+
+
+    }
+    return isprime(sum);
+}
+int main(){
+    int n,m;
+    cin>>n>>m;
+    for(int i=n;i<=m;i++){
+    if(isprime(i)&&calculatesum(i))
+    cout<<i<<" ";
+    }
+    return 0;
+
+}
