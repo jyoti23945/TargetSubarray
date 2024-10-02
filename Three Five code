@@ -34,6 +34,52 @@ void solve(vector<string>&arr){
         
           }
 
+CODE 2(which braces in the input)
+#include<bits/stdc++.h>
+#include<string>
+#include<sstream>
+using namespace std;
+void solve(vector<string>&arr){
+    for(auto n:arr){
+        int num=stoi(n);
+        if(num%3==0 &&num%5==0){
+            cout<<"threefive"<<" ";
+        }
+        else if(num%5==0){
+            cout<<"five"<<" ";
+        }
+        else if(num%3==0){
+            cout<<"three"<<" ";
+
+            }
+            else{
+                cout<<num<<" ";
+            }
+        }
+    }
+    int main(){
+        vector<string>nums;
+        string line;
+        string x;
+        getline(cin, line);
+        line.erase(remove(line.begin(),line.end(),'['),line.end());
+        line.erase(remove(line.begin(),line.end(),']'),line.end());
+         
+        istringstream stream(line);
+          
+          while(stream>>x){
+            nums.push_back(x);
+          }
+          solve(nums);
+        
+          }
+
+    
+
+
+
+
+
     
 
 
