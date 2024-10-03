@@ -1,0 +1,31 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+bool ispal(int n){
+    int r=0;
+    int d=n;
+    while(d>0){
+        int num=d%10;
+        r=r*10+num;
+        d/=10;
+
+        
+    }
+    return (r==n);
+}
+int main(){
+    int n,m;
+    cin>>n>>m;
+    int count=0;
+    for(int i=n;i<=m;i++){
+        if(ispal(i))
+        count++;
+
+    }
+    cout<<count;
+
+}
+
+
+    
+ 
