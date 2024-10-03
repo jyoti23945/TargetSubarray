@@ -1,0 +1,56 @@
+#include<iostream>
+#include<vector>
+#include<sstream>
+#include<algorithm>
+using namespace std;
+int main(){
+//Case2:1 2 3 4 5
+/*vector<int>arr;
+string input;
+getline(cin,input);
+int x;
+istringstream stream(input);//stringstream ss(input);
+while(stream>>x){
+    arr.push_back(x);
+}
+for(auto c:arr)
+cout<<c<<" ";*/
+
+//CASE 3:1,2,3,4,55
+/*vector<string>arr;
+string input;
+string x;
+
+getline(cin,input);
+//input.erase(remove(input.begin(),input.end(),','),input.end());
+stringstream ss(input);
+while(getline(ss,x,',')){
+    arr.push_back(x);
+}
+for(auto c:arr)
+cout<<c<<" ";*/
+
+//CASE 1:[1,2,3,44,5]
+vector<string>arr;
+string input;
+string x;
+getline(cin,input);
+
+input.erase(remove(input.begin(),input.end(),'['),input.end());
+input.erase(remove(input.begin(),input.end(),']'),input.end());
+//input.erase(remove(input.begin(),input.end(),','),input.end());
+stringstream ss(input);
+while(getline(ss,x,',')){
+    arr.push_back(x);
+}
+for(auto c:arr){
+    cout<<c<<" ";
+}
+
+}
+
+
+
+
+
+
