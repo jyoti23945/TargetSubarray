@@ -33,3 +33,48 @@ int main()
         cout<<s[i]<<" ";
     }
    return 0;
+
+CODE 2:
+#include<bits/stdc++.h>
+using namespace std;
+vector<string>threefive(vector<int>v,int n){
+    vector<string>s;
+    for(int i=0;i<n;i++){
+        if(v[i]%3==0 &&v[i]%5==0){
+            s.push_back("threefive");
+        }
+        else if(v[i]%3==0){
+            s.push_back("three");
+        }
+        else if(v[i]%5==0){
+            s.push_back("five");
+        }
+        else{
+            string ans=to_string(v[i]);
+            s.push_back(ans);
+        }
+
+        }
+        return s;
+    }
+    int main(){
+        int n;
+        cin>>n;
+        cin.ignore();
+        vector<int>ans;
+        string input;
+        int x;
+        getline(cin,input);
+        stringstream ss(input);
+        while(ss>>x){
+            ans.push_back(x);
+
+        }
+        vector<string>result=threefive(ans,n);
+        for(string c:result){
+            cout<<c<<" ";
+        }
+
+
+    }
+
