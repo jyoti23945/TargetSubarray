@@ -1,0 +1,45 @@
+/*#include<bits/stdc++.h>
+using namespace std;
+string word(string s){
+    for(int i=0;i<s.size();i++){
+        if(i==0||i==(s.size()-1)){
+            s[i]=char((int)s[i]-32);
+
+        } else if(s[i]==' '){
+          //  if(i-1>=0 &&i+1<s.size()  ){   
+        
+           if(((int)s[i-1]-32)>=65) 
+           s[i-1]=char((int)s[i-1]-32);
+           if(((int)s[i+1]-32)>=65) 
+            s[i+1]=char((int)s[i+1]-32);
+        }
+    }
+
+    return s;
+}
+int main(){
+    string t="take u forward is Awesome";
+    cout<<word(t);
+    return 0;
+}*/
+#include<bits/stdc++.h>
+using namespace std;
+string word(string s){
+    int n=s.size();
+    for(int i=0;i<n;i++){
+        if(i==0||i==n-1)
+        s[i]=toupper(s[i]);
+        else if(s[i]==' '){
+            if(i-1>=0)
+            s[i-1]=toupper(s[i-1]);
+            if(i+1<n)
+            s[i+1]=toupper(s[i+1]);
+        }
+    }
+    return s;
+}
+int main(){
+    string t="Take u Forward is Awesome";
+    cout<<word(t);
+
+}
