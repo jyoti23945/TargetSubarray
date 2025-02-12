@@ -1,0 +1,50 @@
+/*#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    string s="aaab";
+    string t="aabc";
+    unordered_map<char,int>mp;
+    if(s.size()!=t.size()){
+        cout<<"false";
+    }
+    for(auto c: s){
+        mp[c]++;
+    }
+    for(auto c1:t){
+        if(mp.find(c1)==mp.end()||mp[c1]=0){
+        cout<<"false";
+        return 0;
+    }
+    mp[c1]--;
+}
+ cout<<"true";
+}*/
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    string s,t;
+   
+    unordered_map<char,int>mp;
+    cin>>s;
+    cin>>t;
+    if(s.size()!=t.size()){
+        cout<<"false";
+        return 0;
+    }
+    for(auto c:s)
+    mp[c]++;
+    for(auto d:t){
+        if(mp.find(d)==mp.end()||mp[d]==0){
+        cout<<"false";
+        return 0;
+    }
+    mp[d]--;
+    
+}
+cout<<" true";
+}
+
+
+
+
+    
