@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    string str1 ="abcdef";
+    string str2 = "cefz";
+    string ans="";
+    unordered_set<char>set(str2.begin(),str2.end());
+    for(auto c: str1){
+        if(set.find(c)==set.end()){
+            ans+=c;
+
+        }
+    }
+    cout<<ans;
+}
+    
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    string str1 = "abcdef";
+    string str2 = "cefz";
+    string ans = "";
+
+    for (auto c : str1) {
+        if (str2.find(c) == string::npos) { // Correct condition to check if character is NOT in str2
+            ans += c;
+        }
+    }
+
+    cout << ans << endl;
+    return 0;
+}
