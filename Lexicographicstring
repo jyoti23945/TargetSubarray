@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    string s="abcdxyz";
+    string ans="";
+    for(int i=0;i<s.size();i++){
+        int ascii=int(s[i]);
+        if(ascii==90){
+            s[i]=char(65);
+        }
+       else if(ascii==122){
+            s[i]=char(97);
+        }
+
+        else if((ascii>=65 && ascii<90)||(ascii>=97&&ascii<122)){
+            s[i]=char(ascii+1);
+        }
+       
+        ans+=s[i];
+    }
+    cout<<ans;
+
+
+}
