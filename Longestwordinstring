@@ -1,0 +1,30 @@
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    string s="Google docs gggggggggggggggggggggggg";
+    int i=0,j=0;
+    int cl=0;
+    int start;
+    int maxl=0;
+    string cw="";
+    int n=s.size();
+    while(j<=n){
+        if(j<n&&s[j]!=' '){
+            j++;
+
+        }
+        else{
+            cl=j-i;
+            if(cl>maxl){
+                maxl=cl;
+                 start=i;
+            }
+            j++;
+            i=j;
+        }
+    }
+    string ans=s.substr(start,maxl);
+    cout<<ans;
+
+}
